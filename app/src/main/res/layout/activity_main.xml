@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg1">
+
+    <TextView
+        android:id="@+id/logoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="MyJournal"
+        android:textSize="32sp"
+        android:textColor="#FF6200EE"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/memoryNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Memory Name"
+        android:textColorHint="@color/black"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/logoTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/journalEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:hint="Write your journal entry here..."
+        android:textColorHint="@color/black"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/memoryNameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintHeight_percent="0.4"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Journal"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF6200EE"
+        app:layout_constraintTop_toBottomOf="@id/journalEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Journals"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF6200EE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:padding="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
